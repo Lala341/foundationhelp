@@ -194,17 +194,17 @@ html {
                                    
                                     <center>
                                             <br>
-                                    <label>Select a date:</label>
+                                    <label>Selecciona una fecha:</label>
                                     <div id="W1" class="warning">
-                                        <p>A selection is required</p>
+                                        <p>Se requiere una selección</p>
                                     </div>
                                 </center>
                                     <div   id="datepicker" ></div>
                                     
-                                    <button type="button" class="btn btn-primary btn-lg btn-block" onClick="direccion($('#datepicker').val())">Next</button>
+                                    <button type="button" class="btn btn-primary btn-lg btn-block" onClick="direccion($('#datepicker').val())">Siguiente</button>
                                     <br>
                                     <div id="pro" style="display: none;">
-                                            <p>loading...</p>
+                                            <p>Cargando...</p>
                                     </div>
     
                                 </article>
@@ -213,7 +213,7 @@ html {
                                         
                                         <div class="above_timepicker">
                                                 <br>
-                                                <button type="button" class="btn btn-outline-primary" onClick="arti()">Pick another Date</button>
+                                                <button type="button" class="btn btn-outline-primary" onClick="arti()">Elige otra fecha</button>
         
                                             
                                                 <div class="user_timezone"></div>
@@ -225,7 +225,7 @@ html {
                                                
                                                 <br>   
                                                 
-                                            <label>What time will your event start:</label>
+                                            <label>A qué hora comenzará su evento:</label>
                                             <div id="W2" class="warning">
                                                     
                                                    
@@ -238,13 +238,13 @@ html {
                                         <div class="timeend">
                                                 <br>
                                                 <br>
-                                            <label>What time will your event end:</label>
+                                            <label>A qué hora finalizará su evento:</label>
                                             <div id="W3" class="warning">
                                                 
                                             </div>
                                             <select name="OS" id="timestartpi2" class="selectpicker form-control">
                                                     <br>    
-                                                <button type="button" class="btn btn-primary btn-lg btn-block" onClick="agendar($('#datepicker').val(),$('#timestartpi').val(),$('#timestartpi2').val())">Done</button>
+                                                <button type="button" class="btn btn-primary btn-lg btn-block" onClick="agendar($('#datepicker').val(),$('#timestartpi').val(),$('#timestartpi2').val())">Enviar</button>
        
                                                     <select name="OS" id="timestartpi3" class="hidden">
                                               
@@ -257,7 +257,7 @@ html {
                                 
                             </form>
                            
-                            <button id="button"type="button" class="btn btn-primary btn-lg btn-block" onClick="agendar($('#datepicker').val(),$('#timestartpi').val(),$('#timestartpi2').val())">Done</button>
+                            <button id="button"type="button" class="btn btn-primary btn-lg btn-block" onClick="agendar($('#datepicker').val(),$('#timestartpi').val(),$('#timestartpi2').val())">Enviar</button>
        
                         </div>
                     </div>
@@ -304,7 +304,7 @@ html {
                     datet=fechaform;
                     $.ajax({
                             type: "GET",
-                            url: "https://us-central1-secure-potion-243418.cloudfunctions.net/function-gcalendar-1?callback=?",
+                            url: "https://us-central1-secure-potion-243418.cloudfunctions.net/ES-function-gcalendar-1?callback=?",
     
                             data: {
                                 calendarId: query.calendarId,
@@ -431,7 +431,7 @@ html {
     
     ($.ajax({
                     type: "GET",
-                    url: "https://us-central1-secure-potion-243418.cloudfunctions.net/function-addEvent?callback=?",
+                    url: "https://us-central1-secure-potion-243418.cloudfunctions.net/ES-function-addEvent?callback=?",
                     data: {
                         eventTitle: query.eventTitle,
                         eventDescription: query.eventDescription,
