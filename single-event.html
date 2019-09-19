@@ -177,17 +177,17 @@
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <input class="input" placeholder="Name" type="text">
+                                            <input id="ema1" class="input" placeholder="Name" type="text">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <input class="input" placeholder="Email" type="email">
+                                            <input id="ema" class="input" placeholder="Email" type="email">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <input class="input" placeholder="Age" type="text">
+                                            <input id="ema2"class="input" placeholder="Age" type="text">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
@@ -330,6 +330,27 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
        
        document.getElementById("e").style.display="none";
        document.getElementById("e2").style.display="block";
+
+
+    var goo="103n26_DfxzSqKHxeoV0U5L7gPcRxzgX8GEiwDwTrR5Q";
+    var emailUser=document.getElementById("ema").value;
+    var name=document.getElementById("ema1").value;
+    var age=document.getElementById("ema2").value;
+    ($.ajax({
+                    type: "GET",
+                    url: "https://us-central1-secure-potion-243418.cloudfunctions.net/function-DriveCapture?callback=?&"+"googlesheetId="+goo+"&namesheet=Sheet1&emailUser="+emailUser+"&nameUser="+name+"&lastnameUser=-&phoneUser="+age+"&countryUser=-&addressUser=-&ageUser=-&genderUser=VISITA",
+                    
+                    crossDomain:true,
+                            
+                    success: function(t) {
+                        console.log(t);
+                    
+                    },
+                    error: function(t) {
+                        console.log(t);
+    
+                    }
+                }));
 
 }
 
